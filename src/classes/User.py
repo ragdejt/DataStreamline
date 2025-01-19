@@ -29,3 +29,10 @@ class User:
             cursor.execute(f"""
             INSERT OR IGNORE INTO {DB_TABLE_USER}(ID, NOME, SENHA) VALUES (?, ?, ?)""",
             (self.ID, self.NOME, self.SENHA))
+
+ADMIN = User(
+    ID=1,
+    NOME="ADMIN",
+    SENHA="ADMIN"
+)
+
